@@ -1,10 +1,15 @@
 import React from "react"
 import MemesData from "../MemesData"
+import ShakespeareQuotes from "../ShakespeareQuotes"
 
 export default function Meme(){
+    const [option, setOption] = React.useState(null)
+    const [text, setText] = React.useState("")
+    
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
+        quoteText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
 
@@ -33,14 +38,18 @@ export default function Meme(){
             <div className="container">
                 <div className="row border border-dark">
                     <div className="col-6 float-start my-5 p-2 align-middle">
-                            <input 
-                                type="text" 
+                            <select 
+                                value={meme.quoteText} 
                                 className="m-2 p-2" 
-                                placeholder="Top text"
-                                name="topText"
-                                value={meme.topText}
+                                name="quoteText"
                                 onChange={handleChange}
-                                />
+                                >
+                            {ShakespeareQuotes.data.quotes.map((quote, index) => (
+                            <option value={index} key={index}>
+                                {quote.line}
+                            </option>
+                            ))}
+                            </select>
                             <input 
                                 type="text" 
                                 className="m-2 p-2" 
@@ -52,7 +61,7 @@ export default function Meme(){
                             <button className="btn btn-success m-2 p-2" onClick={getMemeImage}>Get a New Meme Image</button>
                     </div>
                     <div className="col-6 float-end my-5 p-2">
-                    <h2 className="carousel-caption my-5">{meme.topText}</h2>
+                    <h2 className="carousel-caption my-5">{meme.quoteText}</h2>
                     <img src={meme.randomImage} className="rounded img-fluid meme--image"/>
                     <h2 className="carousel-caption">{meme.bottomText}</h2>
                     </div>
