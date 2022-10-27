@@ -3,8 +3,6 @@ import MemesData from "../MemesData"
 import ShakespeareQuotes from "../ShakespeareQuotes"
 
 export default function Meme(){
-    const [option, setOption] = React.useState(null)
-    const [text, setText] = React.useState("")
     
     const [meme, setMeme] = React.useState({
         topText: "",
@@ -44,8 +42,10 @@ export default function Meme(){
                                 name="quoteText"
                                 onChange={handleChange}
                                 >
-                            {ShakespeareQuotes.data.quotes.map((quote, index) => (
-                            <option value={index} key={index}>
+                    {ShakespeareQuotes.data.quotes.map((quote, index) => (
+                            <option 
+                                value={meme.quote} 
+                                key={index}>
                                 {quote.line}
                             </option>
                             ))}
@@ -57,12 +57,12 @@ export default function Meme(){
                                 name="bottomText"
                                 value={meme.bottomText}
                                 onChange={handleChange}
-                                />
+                            />
                             <button className="btn btn-success m-2 p-2" onClick={getMemeImage}>Get a New Meme Image</button>
                     </div>
                     <div className="col-6 float-end my-5 p-2">
                     <h2 className="carousel-caption my-5">{meme.quoteText}</h2>
-                    <img src={meme.randomImage} className="rounded img-fluid meme--image"/>
+                    <img src={meme.randomImage} className="rounded img-fluid"/>
                     <h2 className="carousel-caption">{meme.bottomText}</h2>
                     </div>
                 </div> 
