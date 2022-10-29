@@ -1,6 +1,7 @@
 import React from "react"
 import MemesData from "../MemesData"
 import ShakespeareQuotes from "../ShakespeareQuotes"
+import "../index.css"
 
 export default function Meme(){
     
@@ -35,10 +36,10 @@ export default function Meme(){
         <>
             <div className="container">
                 <div className="row border border-dark">
-                    <div className="col-6 float-start my-5 p-2 align-middle">
+                    <div className="col-6 float-start my-5 align-middle">
                             <select 
                                 value={meme.quoteText} 
-                                className="m-2 p-2" 
+                                className="btn btn-secondary dropdown-toggle"
                                 name="quoteText"
                                 onChange={handleChange}
                                 >
@@ -61,7 +62,7 @@ export default function Meme(){
                             <button className="btn btn-success m-2 p-2" onClick={getMemeImage}>Get a New Meme Image</button>
                     </div>
                     <div className="col-6 float-end my-5 p-2">
-                    <h2 className="carousel-caption my-5">{meme.quoteText}</h2>
+                    <h2 className="carousel-caption meme--text">{meme.quoteText}</h2>
                     <img src={meme.randomImage} className="rounded img-fluid"/>
                     <h2 className="carousel-caption">{meme.bottomText}</h2>
                     </div>
