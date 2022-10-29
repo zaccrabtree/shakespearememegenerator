@@ -8,19 +8,33 @@ body {
   color: black;
 }
 
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 .meme {
   position: relative;
 }
 
 .meme--image {
   max-width: 100%;
-  border-radius: 3px;
+  border-radius: 5px;
+  margin-top: 5em;
 }
 
 .meme--text {
   position: absolute;
   width: 80%;
-  text-align: center;
+  text-align: right-bottom;
   left: 50%;
   transform: translateX(-50%);
   margin: 15px 0;
@@ -42,6 +56,30 @@ body {
       2px 2px 5px #000 !important;
 }
 
+.cite--text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px !important;
+  font-family: impact, sans-serif !important;
+  font-size: .25em;
+  text-transform: uppercase;
+  color: white !important;
+  letter-spacing: 1px !important;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000 !important;
+}
 .bottom {
   bottom: 0;
 }

@@ -7,8 +7,8 @@ export default function Meme(){
     
     const [meme, setMeme] = React.useState({
         topText: "",
-        bottomText: "",
         quoteText: "",
+        citeText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
 
@@ -35,8 +35,8 @@ export default function Meme(){
     return (
         <>
             <div className="container">
-                <div className="row border border-dark">
-                    <div className="col-6 float-start my-5 align-middle">
+                <div className="text-center">
+                <div className="row meme">
                             <select 
                                 value={meme.quoteText} 
                                 className="btn btn-secondary dropdown-toggle"
@@ -51,20 +51,25 @@ export default function Meme(){
                             </option>
                             ))}
                             </select>
+                </div>
+                </div>
+
+                <div className="row border border-dark">
+                    <div className="col-6 float-start my-5 align-middle">
                             <input 
                                 type="text" 
                                 className="m-2 p-2" 
-                                placeholder="Bottom text"
-                                name="bottomText"
+                                placeholder="Top text"
+                                name="topText"
                                 value={meme.bottomText}
                                 onChange={handleChange}
                             />
                             <button className="btn btn-success m-2 p-2" onClick={getMemeImage}>Get a New Meme Image</button>
                     </div>
-                    <div className="col-6 float-end my-5 p-2">
+                    <div className="col-6 float-end my-5 p-2 text-center">
                     <h2 className="carousel-caption meme--text">{meme.quoteText}</h2>
                     <img src={meme.randomImage} className="rounded img-fluid"/>
-                    <h2 className="carousel-caption">{meme.bottomText}</h2>
+                    <h2 className="top meme--text">{meme.topText}</h2>
                     </div>
                 </div> 
                 <br/>
