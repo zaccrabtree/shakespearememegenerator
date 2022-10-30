@@ -3,16 +3,13 @@ import "../index.css"
 
 export default function Header() {
     return (
-        <header className="container-fluid">
+        <header className="container-fluid flex-container">
             <div className="row alert header--banner">
-                <div className="col-1 center">
+                <div className="col-2 center">
                     <img src={require("../Images/shakespeareimage.png")} className="header--image"/>
                 </div>
                 <div className="col-10 center header--text">
                     <h1>Shakespeare Meme Generator</h1>
-                </div>
-                <div className="col-1 center header--logo">
-                    <h6>Final Promineo Project</h6>
                 </div>
             <div className="row">
                 <div className="col-12">
