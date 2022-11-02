@@ -107,73 +107,85 @@ export default {
         cite: "The Tempest (Act 4, Scene 1)"
       },
       {
-        line: "Life\'s but a walking shadow, a poor player, that struts and frets his hour upon the stage, and then is heard no more...",
+        line: "Life's but a walking shadow, a poor player, that struts and frets his hour upon the stage, and then is heard no more...",
         cite: "Macbeth (Act 5, Scene 5)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "Et tu, Brute?",
+        cite: "Julius Caesar (Act 3, Scene 1)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "There is nothing either good or bad, but thinking makes it so.",
+        cite: "Hamlet (Act 2, Scene 2)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "Nothing will come of nothing.",
+        cite: "King Lear (Act 1, Scene 1)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "The course of true love never did run smooth.",
+        cite: "A Midsummer Night's Dream (Act 1, Scene 1)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "Lord, what fools these mortals be!",
+        cite: "A Midsummer Night's Dream (Act 1, Scene 1)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "The fault, dear Brutus, lies not within the stars, but in ourselves, that we are underlings.",
+        cite: "Julius Caesar (Act 1, Scene 2)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "Let me not to the marriage of true minds admit impediments.",
+        cite: "Sonnet 116"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "The evil that men do lives after them; The good is oft interrèd with their bones.",
+        cite: "Julius Caesar (Act 3, Scene 2)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "Misery acquaints a man with strange bedfellows.",
+        cite: "The Tempest (Act 2, Scene 2)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "By the pricking of my thumbs, something wicked this way comes.",
+        cite: "MacBeth (Act 4, Scene 1)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "All the perfumes of Arabia will not sweeten this little hand.",
+        cite: "MacBeth (Act 5, Scene 1)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "Alas, poor Yorick! I knew him, Horatio: A fellow of infinite jest.",
+        cite: "Hamlet (Act 5, Scene 1)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "Goodnight, sweet prince, and flights of angels sing thee to thy rest!",
+        cite: "Hamlet (Act 5, Scene 2)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "Oh my offence is rank, it smells to heaven",
+        cite: "Hamlet (Act 3, Scene 3)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "Thou shouldst not have been old till thou hadst been wise",
+        cite: "King Lear (Act 1, Scene 5)"
       },
       {
-        line: "Is this a dagger which I see before me, the handle toward my hand?",
-        cite: "MacBeth (Act 2, Scene 2)"
+        line: "This cold night will turn us all to fools and madmen.",
+        cite: "King Lear (Act 3, Scene 4)"
       },
+      {
+        line: "As flies to wanton boys are we to the gods. They kill us for their sport.",
+        cite: "King Lear (Act 4, Scene 1)"
+      },
+      {
+        line: "Jesters do oft prove prophets.",
+        cite: "King Lear (Act 5, Scene 3)"
+      },
+      {
+        line: "We know what we are, but know not what we may be",
+        cite: "Hamlet (Act 4, Scene 5)"
+      }
 ]
 }
 }

@@ -36,6 +36,53 @@ export default function Meme(){
             [name]: value
         }))
     }
+    //add a function to save the meme to the database
+    //add a function to update the meme in the database
+    //add a function to delete the meme from the database
+    //add a function to get the meme from the database
+    //add a function to get all the memes from the database
+    
+
+    function handleSubmit(event){
+        event.preventDefault()
+        const newMeme = {
+            topText: meme.topText,
+            quoteText: meme.quoteText,
+            citeText: meme.citeText,
+            randomImage: meme.randomImage
+        }
+        //post the meme to the database
+        fetch("https://63376700132b46ee0be12138.mockapi.io/memes/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newMeme)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+    function handleUpdate(event){
+        event.preventDefault()
+        const updatedMeme = {
+            topText: meme.topText,
+            quoteText: meme.quoteText,
+            citeText: meme.citeText,
+            randomImage: meme.randomImage
+        }
+        console.log(updatedMeme)
+    }
+    function handleDelete(event){
+        event.preventDefault()
+        const deletedMeme = {
+            topText: meme.topText,
+            quoteText: meme.quoteText,
+            citeText: meme.citeText,
+            randomImage: meme.randomImage
+        }
+        console.log(deletedMeme)
+    }
+
     return (
         <>
             <div className="container text-center">
@@ -77,6 +124,14 @@ export default function Meme(){
                 </div> 
                 <br/>
                 <br/>
+            //add a button to save the meme
+            //add a button to view all saved memes
+            <div className="row">
+                <div className="col-12">
+                    <button className="btn btn-primary" onClick={handleSubmit}>Save Meme</button>
+                    <button className="btn btn-primary">View Saved Memes</button>
+            </div>
+            </div>
             </div>
         </>
     )
