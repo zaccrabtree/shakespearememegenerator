@@ -7,7 +7,6 @@ export default function Meme(){
     const [meme, setMeme] = React.useState({
         topText: "",
         quoteText: "",
-        citeText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
 
@@ -52,7 +51,7 @@ export default function Meme(){
             randomImage: meme.randomImage
         }
         //post the meme to the database
-        fetch("https://63376700132b46ee0be12138.mockapi.io/memes/", {
+        fetch("https://63376700132b46ee0be12138.mockapi.io/memes/memes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
