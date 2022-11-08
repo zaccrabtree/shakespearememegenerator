@@ -7,6 +7,7 @@ export default function Meme(){
     const [meme, setMeme] = React.useState({
         topText: "",
         quoteText: "",
+        citeText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
 
@@ -35,11 +36,6 @@ export default function Meme(){
             [name]: value
         }))
     }
-    //add a function to save the meme to the database
-    //add a function to update the meme in the database
-    //add a function to delete the meme from the database
-    //add a function to get the meme from the database
-    //add a function to get all the memes from the database
     
 
     function handleSubmit(event){
@@ -61,26 +57,7 @@ export default function Meme(){
         .then(res => res.json())
         .then(data => console.log(data))
     }
-    function handleUpdate(event){
-        event.preventDefault()
-        const updatedMeme = {
-            topText: meme.topText,
-            quoteText: meme.quoteText,
-            citeText: meme.citeText,
-            randomImage: meme.randomImage
-        }
-        console.log(updatedMeme)
-    }
-    function handleDelete(event){
-        event.preventDefault()
-        const deletedMeme = {
-            topText: meme.topText,
-            quoteText: meme.quoteText,
-            citeText: meme.citeText,
-            randomImage: meme.randomImage
-        }
-        console.log(deletedMeme)
-    }
+   
 
     return (
         <>

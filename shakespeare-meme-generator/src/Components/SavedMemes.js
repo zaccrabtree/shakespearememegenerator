@@ -13,7 +13,7 @@ export default function SavedMemes(props) {
                 setMemes(data);
             });
     }, []);
-
+   
         var rows = [];
         memes.forEach(element => {
             rows.push(
@@ -34,10 +34,13 @@ export default function SavedMemes(props) {
                     elementId={element.id}
                     singledata={props.singledata}
                     getMeme={props.getMeme}
-                    deleteMeme={props.deleteMeme}/>
+                    deleteMeme={props.deleteMeme}
+                    handleChange={props.handleChange}/>
                 </td>
             </tr>)
         });
+
+    
     return(
             <table className="table table-striped">
                 <thead>
