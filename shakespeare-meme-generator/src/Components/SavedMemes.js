@@ -13,7 +13,16 @@ export default function SavedMemes(props) {
                 setMemes(data);
             });
     }, []);
-   
+    //function that will setState of the memes to the new array
+    const updateMemes = () => {
+        fetch("https://63376700132b46ee0be12138.mockapi.io/memes/memes")
+            .then((response) => response.json())
+            .then((data) => {
+                setMemes(data);
+            });
+    };
+    
+
         var rows = [];
         memes.forEach(element => {
             rows.push(
@@ -35,7 +44,8 @@ export default function SavedMemes(props) {
                     singledata={props.singledata}
                     getMeme={props.getMeme}
                     deleteMeme={props.deleteMeme}
-                    handleChange={props.handleChange}/>
+                    handleChange={props.handleChange}
+                    onClick={updateMemes}/>
                 </td>
             </tr>)
         });
@@ -58,5 +68,3 @@ export default function SavedMemes(props) {
             </table>
             )
         }   
-    
-
