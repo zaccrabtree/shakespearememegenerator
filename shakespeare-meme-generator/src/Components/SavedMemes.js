@@ -37,14 +37,19 @@ export default function SavedMemes(props) {
                 <td>{element.topText}</td>
                 <td>{element.quoteText}</td>
                 <td>{element.citeText}</td>
-                <td><img className="rounded img-fluid" src={element.randomImage} /></td>
+                <td><div className="col-6 float-end my-5 p-2 text-center">
+                    <h2 className="carousel-caption meme--text">{element.quoteText}</h2>
+                    <img src={element.randomImage} className="rounded img-fluid"/>
+                    <h2 className="top meme--text">{element.topText}</h2>
+                    </div></td>
                 <td><UpdateMeme
                     elementId={element.id}
                     singledata={props.singledata}
                     getMeme={props.getMeme}
                     updateMeme={props.updateMeme}
                     handleChange={props.handleChange}
-                    onClick={updateMeme}/></td>
+                    onClick={updateMemes}
+                    /></td>
                 <td>
                     <DeleteMeme
                     elementId={element.id}

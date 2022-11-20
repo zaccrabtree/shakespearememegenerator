@@ -43,12 +43,7 @@ export default function UpdateMeme(props) {
 
     return (
         <>
-            <div className="meme">
-                <div className="top-text">{topText}</div>
-                <div className="quote-text">{quoteText}</div>
-                <div className="cite-text">{citeText}</div>
-                <div className="random-image">{randomImage}</div>
-            </div>
+            
             <div className="form-group">
                 <label htmlFor="topText">Top Text</label>
                 <input
@@ -68,26 +63,6 @@ export default function UpdateMeme(props) {
                     id="quoteText"
                     value={quoteText}
                     onChange={(e) => setQuoteText(e.target.value)}
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="citeText">Cite Text</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    id="citeText"
-                    value={citeText}
-                    onChange={(e) => setCiteText(e.target.value)}
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="randomImage">Random Image</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    id="randomImage"
-                    value={randomImage}
-                    onChange={(e) => setRandomImage(e.target.value)}
                 />
             </div>
             <button className="btn btn-primary" onClick={updateMeme}>Update</button>
