@@ -37,7 +37,7 @@ export default function SavedMemes(props) {
                 <td>{element.id}</td>
                 <td>{element.topText}</td>
                 <td>{element.quoteText}</td>
-                <td><div className="col-6 float-end my-5 p-2 text-center">
+                <td><div className="col-12 my-5 p-2 text-center">
                     <h2 className="carousel-caption meme--text">{element.quoteText}</h2>
                     <img src={element.randomImage} className="rounded"/>
                     <h2 className="top meme--text">{element.topText}</h2>
