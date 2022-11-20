@@ -2,6 +2,7 @@ import React from "react";
 import Meme from "./Meme";
 import UpdateMeme from "./UpdateMeme";
 import DeleteMeme from "./DeleteMeme";
+import "../index.css"
 
 //populate the table with the memes from the database
 export default function SavedMemes(props) {
@@ -36,10 +37,9 @@ export default function SavedMemes(props) {
                 <td>{element.id}</td>
                 <td>{element.topText}</td>
                 <td>{element.quoteText}</td>
-                <td>{element.citeText}</td>
                 <td><div className="col-6 float-end my-5 p-2 text-center">
                     <h2 className="carousel-caption meme--text">{element.quoteText}</h2>
-                    <img src={element.randomImage} className="rounded img-fluid"/>
+                    <img src={element.randomImage} className="rounded"/>
                     <h2 className="top meme--text">{element.topText}</h2>
                     </div></td>
                 <td><UpdateMeme
@@ -70,7 +70,6 @@ export default function SavedMemes(props) {
                         <th>#</th>
                         <th>Top Text</th>
                         <th>Quote Text</th>
-                        <th>Cite Text</th>
                         <th>Random Image</th>
                         <th>Update</th>
                         <th>Delete</th>
