@@ -22,6 +22,12 @@ export default function SavedMemes(props) {
             });
     };
     
+//function that will on the click of the update button, will render the updateMeme component
+    const updateMeme = (id) => {
+        return (
+            <UpdateMeme elementId={id} onClick={updateMemes} />
+        )
+    }
 
         var rows = [];
         memes.forEach(element => {
@@ -31,13 +37,14 @@ export default function SavedMemes(props) {
                 <td>{element.topText}</td>
                 <td>{element.quoteText}</td>
                 <td>{element.citeText}</td>
-                <td>{element.randomImage}</td>
+                <td><img className="rounded img-fluid" src={element.randomImage} /></td>
                 <td><UpdateMeme
                     elementId={element.id}
                     singledata={props.singledata}
                     getMeme={props.getMeme}
                     updateMeme={props.updateMeme}
-                    handleChange={props.handleChange}/></td>
+                    handleChange={props.handleChange}
+                    onClick={updateMeme}/></td>
                 <td>
                     <DeleteMeme
                     elementId={element.id}
