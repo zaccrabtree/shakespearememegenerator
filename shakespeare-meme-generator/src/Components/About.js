@@ -13,11 +13,11 @@ export default function About() {
                 Development Bootcamp.
                 </p>
                 <p>
-                The meme generator uses the Imgflip API to retrieve images and the
-                Shakespeare API to retrieve quotes.
+                The meme generator uses the Imgflip API to retrieve images and a Shakespeare quotes array to retrieve quotes.
+                It saves the memes to a mock API using the Fetch API and allows the user to update and delete the memes.
                 </p>
                 <p>
-                The code for this project is available on{" "}
+                The code for this project is available on GitHub <a href="https://github.com/zaccrabtree/shakespearememegenerator.git>HERE</a>.
                 .
                 </p>
             </div>
