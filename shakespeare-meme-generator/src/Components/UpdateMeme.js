@@ -42,6 +42,14 @@ export default function UpdateMeme(props) {
         );
     };
 
+    function update(event) {
+        const {name, value} = event.target
+        setQuoteText(prevMeme => ({
+            ...prevMeme,
+            [name]: value
+        }))
+    }
+
     return (
         <>
             
@@ -59,10 +67,12 @@ export default function UpdateMeme(props) {
             <div className="form-group">
                 <label htmlFor="quoteText">Quote Text</label>
                      <select 
-                     value={meme.quoteText} 
+                    //dropdown should show selected quote
+                     value={quoteText} 
                      className="btn btn-secondary dropdown-toggle form-control"
                      name="quoteText"
                      onChange={(e) => setQuoteText(e.target.value)}
+                     
                      >
          {ShakespeareQuotes.data.quotes.map((quote, index) => (
                  <option 
