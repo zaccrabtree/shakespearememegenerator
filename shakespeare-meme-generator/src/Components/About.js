@@ -17,7 +17,7 @@ export default function About() {
                 It saves the memes to a mock API using the Fetch API and allows the user to update and delete the memes.
                 </p>
                 <p>
-                The code for this project is available on GitHub <a href="https://github.com/zaccrabtree/shakespearememegenerator.git>HERE</a>.
+                The code for this project is available on GitHub at https://github.com/zaccrabtree/shakespearememegenerator.git
                 .
                 </p>
             </div>
