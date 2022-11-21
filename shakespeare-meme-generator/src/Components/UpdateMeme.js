@@ -1,4 +1,5 @@
 import React from "react";
+import ShakespeareQuotes from "../ShakespeareQuotes";
 
 export default function UpdateMeme(props) {
 //should take in the id of the meme that is being updated and populate a component like Meme.js with the data from the meme that is being updated
@@ -57,13 +58,20 @@ export default function UpdateMeme(props) {
             </div>
             <div className="form-group">
                 <label htmlFor="quoteText">Quote Text</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    id="quoteText"
-                    value={quoteText}
-                    onChange={(e) => setQuoteText(e.target.value)}
-                />
+                     <select 
+                     value={meme.quoteText} 
+                     className="btn btn-secondary dropdown-toggle form-control"
+                     name="quoteText"
+                     onChange={(e) => setQuoteText(e.target.value)}
+                     >
+         {ShakespeareQuotes.data.quotes.map((quote, index) => (
+                 <option 
+                     value={meme.quote} 
+                     key={index}>
+                     {quote.line}
+                 </option>
+                 ))}
+                 </select>
             </div>
             <button className="btn btn-primary" onClick={updateMeme}>Update</button>
         </>

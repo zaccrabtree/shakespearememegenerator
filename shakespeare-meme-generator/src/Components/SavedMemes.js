@@ -1,5 +1,4 @@
 import React from "react";
-import Meme from "./Meme";
 import UpdateMeme from "./UpdateMeme";
 import DeleteMeme from "./DeleteMeme";
 import "../index.css"
@@ -23,12 +22,6 @@ export default function SavedMemes(props) {
             });
     };
     
-//function that will on the click of the update button, will render the updateMeme component
-    const updateMeme = (id) => {
-        return (
-            <UpdateMeme elementId={id} onClick={updateMemes} />
-        )
-    }
 
         var rows = [];
         memes.forEach(element => {

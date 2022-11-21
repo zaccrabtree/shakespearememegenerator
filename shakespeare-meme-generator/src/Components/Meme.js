@@ -100,12 +100,10 @@ export default function Meme(){
                 </div> 
                 <br/>
                 <br/>
-            //add a button to save the meme
-            //add a button to view all saved memes
+            //add a button to save the meme to the database
             <div className="row">
                 <div className="col-12">
                     <button className="btn btn-primary" onClick={handleSubmit}>Save Meme</button>
-                    <button className="btn btn-primary">View Saved Memes</button>
             </div>
             </div>
             </div>
