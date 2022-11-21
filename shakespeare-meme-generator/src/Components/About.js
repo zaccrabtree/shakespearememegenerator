@@ -14,7 +14,7 @@ export default function About() {
                 </p>
                 <p>
                 The meme generator uses the Imgflip API to retrieve images and a Shakespeare quotes array to retrieve quotes.
-                It saves the memes to a mock API using the Fetch API and allows the user to update and delete the memes.
+                It saves the created memes to a mock API and allows the user to update and delete the saved Memes, which are again saved to and retrieved from the mock API.
                 </p>
                 <p>
                 The code for this project is available on GitHub at https://github.com/zaccrabtree/shakespearememegenerator.git
