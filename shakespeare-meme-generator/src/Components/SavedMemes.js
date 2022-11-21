@@ -34,12 +34,9 @@ export default function SavedMemes(props) {
         memes.forEach(element => {
             rows.push(
             <tr key={element.id}>
-                <td>{element.id}</td>
-                <td>{element.topText}</td>
-                <td>{element.quoteText}</td>
                 <td><div className="col-12 my-5 p-2 text-center">
                     <h2 className="carousel-caption meme--text">{element.quoteText}</h2>
-                    <img src={element.randomImage} className="rounded"/>
+                    <img src={element.randomImage} className="rounded meme--image"/>
                     <h2 className="top meme--text">{element.topText}</h2>
                     </div></td>
                 <td><UpdateMeme
@@ -67,10 +64,7 @@ export default function SavedMemes(props) {
             <table className="table table-striped">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Top Text</th>
-                        <th>Quote Text</th>
-                        <th>Random Image</th>
+                        <th>Meme Image</th>
                         <th>Update</th>
                         <th>Delete</th>
                     </tr>
