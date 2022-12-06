@@ -2,10 +2,10 @@ import React from "react";
 import ShakespeareQuotes from "../ShakespeareQuotes";
 
 export default function UpdateMeme(props) {
-//should take in the id of the meme that is being updated and populate a component like Meme.js with the data from the meme that is being updated
+//take in the id of the meme that is being updated and populate a component like Meme.js with the data from the meme that is being updated
     const [topText, setTopText] = React.useState("");
     const [quoteText, setQuoteText] = React.useState("");
-    const [citeText, setCiteText] = React.useState("");
+    // const [citeText, setCiteText] = React.useState("");
     const [randomImage, setRandomImage] = React.useState("");
     const [id, setId] = React.useState("");
     const [meme, setMeme] = React.useState([]);
@@ -16,7 +16,6 @@ export default function UpdateMeme(props) {
                 setMeme(data);
                 setTopText(data.topText);
                 setQuoteText(data.quoteText);
-                setCiteText(data.citeText);
                 setRandomImage(data.randomImage);
                 setId(data.id);
             });
@@ -30,7 +29,6 @@ export default function UpdateMeme(props) {
             body: JSON.stringify({
                 topText: topText,
                 quoteText: quoteText,
-                citeText: citeText,
                 randomImage: randomImage,
                 id: id,
             }),
@@ -41,14 +39,6 @@ export default function UpdateMeme(props) {
         }
         );
     };
-
-    function update(event) {
-        const {name, value} = event.target
-        setQuoteText(prevMeme => ({
-            ...prevMeme,
-            [name]: value
-        }))
-    }
 
     return (
         <>
@@ -67,7 +57,7 @@ export default function UpdateMeme(props) {
             <div className="form-group">
                 <label htmlFor="quoteText">Quote Text</label>
                      <select 
-                    //dropdown should show selected quote
+                    //dropdown shows selected quote
                      value={quoteText} 
                      className="btn btn-secondary dropdown-toggle form-control"
                      name="quoteText"

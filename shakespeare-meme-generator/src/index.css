@@ -72,7 +72,7 @@ button {
   padding: 0;
   list-style: none;
 }
-.cite--text {
+/* .cite--text {
   position: absolute;
   width: 80%;
   text-align: center;
@@ -95,7 +95,7 @@ button {
       0 -2px 0 #000,
       -2px 0 0 #000,
       2px 2px 5px #000 !important;
-}
+} */
 .bottom {
   bottom: 0;
 }

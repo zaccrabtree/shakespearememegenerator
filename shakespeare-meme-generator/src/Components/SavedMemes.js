@@ -6,7 +6,7 @@ import "../index.css"
 //populate the table with the memes from the database
 export default function SavedMemes(props) {
     const [memes, setMemes] = React.useState([]);
-    const [updateMeme, setUpdateMeme] = React.useState(false);
+    
     React.useEffect(() => {
         fetch("https://63376700132b46ee0be12138.mockapi.io/memes/memes")
             .then((response) => response.json())
@@ -14,7 +14,7 @@ export default function SavedMemes(props) {
                 setMemes(data);
             });
     }, []);
-    //function that will setState of the memes to the new array
+    //function that will set State of the memes to the new array
     const updateMemes = () => {
         fetch("https://63376700132b46ee0be12138.mockapi.io/memes/memes")
             .then((response) => response.json())

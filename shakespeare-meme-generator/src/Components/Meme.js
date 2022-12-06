@@ -7,7 +7,6 @@ export default function Meme(){
     const [meme, setMeme] = React.useState({
         topText: "",
         quoteText: "",
-        citeText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
 
@@ -43,7 +42,6 @@ export default function Meme(){
         const newMeme = {
             topText: meme.topText,
             quoteText: meme.quoteText,
-            citeText: meme.citeText,
             randomImage: meme.randomImage
         }
         //post the meme to the database
@@ -69,7 +67,7 @@ export default function Meme(){
                                 className="m-2 p-2" 
                                 placeholder="Top text"
                                 name="topText"
-                                value={meme.bottomText}
+                                value={meme.topText}
                                 onChange={handleChange}
                             />
                             <button className="btn btn-success m-2 p-2" onClick={getMemeImage}>Get a New Meme Image</button>
@@ -82,7 +80,7 @@ export default function Meme(){
                                 name="quoteText"
                                 onChange={handleChange}
                                 >
-                    {ShakespeareQuotes.data.quotes.map((quote, index) => (
+                                {ShakespeareQuotes.data.quotes.map((quote, index) => (
                             <option 
                                 value={meme.quote} 
                                 key={index}>
@@ -97,14 +95,14 @@ export default function Meme(){
                     <img src={meme.randomImage} className="rounded img-fluid"/>
                     <h2 className="top meme--text">{meme.topText}</h2>
                     </div>
+                    <div className="col-12">
+                        <button className="btn btn-primary" onClick={handleSubmit}>Save Meme</button>
+                    </div>
                 </div> 
                 <br/>
                 <br/>
-            //add a button to save the meme to the database
             <div className="row">
-                <div className="col-12">
-                    <button className="btn btn-primary" onClick={handleSubmit}>Save Meme</button>
-            </div>
+                
             </div>
             </div>
         </>
